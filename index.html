@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>local insights polygon tolerance test</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+	
+</head>
+<body>
+
+<h1>Original [2550 points]</h1>
+<div id="mapid" style="width: 800px; height: 250px;"></div>
+
+<h1>Simplified for big image (tolerance 0.002)[130 points]</h1>
+<div id="simple-big-image" style="width: 800px; height: 250px;"></div>
+
+
+<h1>Suggestion thumbnails (tolerance 0.001)</h1>
+
+<div style="display:flex">
+    <div class="thumbs">
+        <h2>Jordaan <span>[14 points]</span></h2>
+        <div id="thumb1" style="width: 120px; height: 120px;"></div>
+    </div>
+    <div class="thumbs">
+        <h2>Pijp <span>[10 points]</span></h2>
+        <div id="thumb2" style="width: 120px; height: 120px;"></div>
+    </div>
+    <div class="thumbs">
+        <h2>Weesperzijde <span>[16 points]</span></h2>
+        <div id="thumb3" style="width: 120px; height: 120px;"></div>
+    </div>
+</div>
+
+<p>
+    Tolerance is a number in degrees (e.g. lat/lon distance). 1 degree is roughly equivalent to 69 miles. the default is 0.001, which is around a city block long.
+</p>
+
+<script src="./index.js"></script>
+
+<style>
+body {
+    font-family: sans-serif;
+}
+.leaflet-top,
+.leaflet-bottom {
+    display: none !important
+}
+
+.thumbs > div {
+    border-radius: 5px;
+    border: 2px solid blue;
+    margin-right: 2rem;
+}
+
+.thumbs span {
+    display:block;
+    font-size: 0.8rem;
+    color: grey;
+}
+</style>
+
+</body>
+</html>
