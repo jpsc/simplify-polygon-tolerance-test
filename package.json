@@ -5,12 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "generate": "node save-thumbnails"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "puppeteer": "^5.5.0",
     "simplify-geojson": "^1.0.4"
   }
 }

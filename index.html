@@ -20,18 +20,18 @@
 
 <h1>Suggestion thumbnails (tolerance 0.001)</h1>
 
-<div style="display:flex">
+<div id="thumbnails" style="display:flex">
     <div class="thumbs">
         <h2>Jordaan <span>[14 points]</span></h2>
-        <div id="thumb1" style="width: 120px; height: 120px;"></div>
+        <div class="thumb" id="thumb1" style="width: 120px; height: 120px;"></div>
     </div>
     <div class="thumbs">
         <h2>Pijp <span>[10 points]</span></h2>
-        <div id="thumb2" style="width: 120px; height: 120px;"></div>
+        <div class="thumb" id="thumb2" style="width: 120px; height: 120px;"></div>
     </div>
     <div class="thumbs">
         <h2>Weesperzijde <span>[16 points]</span></h2>
-        <div id="thumb3" style="width: 120px; height: 120px;"></div>
+        <div class="thumb" id="thumb3" style="width: 120px; height: 120px;"></div>
     </div>
 </div>
 
@@ -51,8 +51,6 @@ body {
 }
 
 .thumbs > div {
-    border-radius: 5px;
-    border: 2px solid blue;
     margin-right: 2rem;
 }
 
